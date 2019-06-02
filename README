@@ -1,0 +1,14 @@
+dwintemp program sets the maximum hotend and heatbed temperatures,
+by changing the provided on the command line, 13*.bin
+
+The program searches inside 13*.bin for fixed temperatures (260C and 110C)
+and changes them to those specified on the command line and thus
+the app works only over unmodified, original file.
+
+Examples:
+
+Linux:
+./dwintemps.sh -f /path/to/DWIN_SET/13触控配置文件.bin -b 130 -e 300
+
+Windows:
+dwintemps.bat -f /path/to/DWIN_SET/13触控配置文件.bin -b 130 -e 300
