@@ -57,7 +57,7 @@ public class DwinTempsApplication implements CommandLineRunner {
         newHotendTemp[newHotendTemp.length-2] = (byte)((mainArgs.getHotendTemp()>>8)&0x000000FF);
         newHotendTemp[newHotendTemp.length-1] = (byte)(mainArgs.getHotendTemp()&0x000000FF);
 
-        newHeatbedTemp[newHeatbedTemp.length-2] = (byte)((mainArgs.getHeatbedTemp()>>8)&0x0000FF00);
+        newHeatbedTemp[newHeatbedTemp.length-2] = (byte)((mainArgs.getHeatbedTemp()>>8)&0x000000FF);
         newHeatbedTemp[newHeatbedTemp.length-1] = (byte)(mainArgs.getHeatbedTemp()&0x000000FF);
 
         boolean replaceHotendTemp  = !Arrays.equals(hotendPattern, newHotendTemp);
